@@ -1,0 +1,5 @@
+﻿- Download/Install Ollama
+- dotnet new console -o Demo01
+- dotnet add package OllamaSharp
+- ollama pull phi3:3.8b
+	...
