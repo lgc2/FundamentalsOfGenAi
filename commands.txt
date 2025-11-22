@@ -1,0 +1,11 @@
+﻿- Download/Install Ollama
+- ollama pull phi3:3.8b (and so on...)
+
+- dotnet new console -o Demo01
+- dotnet add package OllamaSharp
+
+- dotnet new web -o Demo02
+- dotnet add package Microsoft.Extensions.AI
+- dotnet add package Microsoft.Extensions.AI.Abstractions --prerelease
+- dotnet add package Microsoft.Extensions.AI.OpenAI --prerelease
+- dotnet add package OllamaSharp
