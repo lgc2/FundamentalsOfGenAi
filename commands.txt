@@ -9,3 +9,9 @@
 - dotnet add package Microsoft.Extensions.AI.Abstractions --prerelease
 - dotnet add package Microsoft.Extensions.AI.OpenAI --prerelease
 - dotnet add package OllamaSharp
+
+- dotnet new console -o Demo03
+- dotnet add package Microsoft.Extensions.Logging
+- dotnet add package Microsoft.Extensions.Logging.Console
+- dotnet add package Microsoft.SemanticKernel
+- dotnet add package Microsoft.SemanticKernel.Connectors.Ollama --prerelease
