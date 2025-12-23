@@ -15,3 +15,13 @@
 - dotnet add package Microsoft.Extensions.Logging.Console
 - dotnet add package Microsoft.SemanticKernel
 - dotnet add package Microsoft.SemanticKernel.Connectors.Ollama --prerelease
+
+- dotnet new console -o Demo04
+- dotnet add package Microsoft.SemanticKernel.Connectors.Ollama --prerelease
+
+- dotnet new console -o Demo05
+- docker run --name postgres -e POSTGRES_PASSWORD=1q2w3e4r@#$ -p 5432:5432 -d pgvector/pgvector:pg17
+- dotnet add package Microsoft.SemanticKernel.Connectors.Ollama --prerelease
+- dotnet add package Microsoft.SemanticKernel.Connectors.PgVector --prerelease
+- dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0
+- dotnet add package Pgvector.EntityFrameworkCore
