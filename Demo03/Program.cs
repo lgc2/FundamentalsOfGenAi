@@ -1,16 +1,19 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Demo03.Plugins;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.Ollama;
 
 var builder = Kernel.CreateBuilder()
-	.AddOllamaChatCompletion(modelId: "phi3:3.8b", endpoint: new Uri("http://localhost:11434/"));
+	.AddOllamaChatCompletion(modelId: "llama3.1:8b", endpoint: new Uri("http://localhost:11434/"));
 
 builder.Services.AddLogging(x => x.AddConsole().SetMinimumLevel(LogLevel.Trace));
 
 var kernel = builder.Build();
 var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
+
+kernel.Plugins.AddFromType<ProductPlugin>("Products");
 
 OllamaPromptExecutionSettings settings = new()
 {
